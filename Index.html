@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gaibu Basha Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+/* Contact section spacing */
+.contact-section {
+    padding: 100px 20px;
+}
+
+.contact-section h2 {
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+
+.contact-email {
+    font-size: 18px;
+    margin-bottom: 35px;
+    letter-spacing: 1px;
+}
+
+.contact-btn {
+    margin-top: 10px;
+}
+}
+
+.skill-title {
+    font-size: 35px;
+    margin-bottom: 30px;
+    background: linear-gradient(90deg,#06b6d4,#9333ea);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Skills spacing improve */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+body {
+    background: #0f172a;
+    color: white;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    position: sticky;
+    top: 0;
+    background: rgba(15,23,42,0.9);
+}
+
+nav a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+}
+
+/* Hero */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(270deg,#4f46e5,#06b6d4,#9333ea);
+    background-size: 600% 600%;
+    animation: gradientMove 10s ease infinite;
+}
+
+.hero img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 3px solid white;
+}
+
+.hero h1 {
+    font-size: 40px;
+}
+
+.hero span {
+    background: linear-gradient(90deg,#fff,#00f);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Typing */
+.typing {
+    border-right: 2px solid white;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 4s steps(30), blink .7s infinite;
+}
+
+@keyframes typing {
+    from {width: 0}
+    to {width: 100%}
+}
+@keyframes blink {
+    50% {border-color: transparent}
+}
+
+/* Sections */
+section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+/* Cards */
+.card {
+    background: #1e293b;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 15px;
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+}
+
+/* Skills */
+.skills span {
+    padding: 10px 15px;
+    background: #6366f1;
+    margin: 5px;
+    display: inline-block;
+    border-radius: 20px;
+}
+
+/* Button */
+.btn {
+    padding: 12px 25px;
+    background: linear-gradient(90deg,#06b6d4,#9333ea);
+    border: none;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+/* Gradient animation */
+@keyframes gradientMove {
+    0% {background-position: 0%}
+    50% {background-position: 100%}
+    100% {background-position: 0%}
+}
+
+/* Fade Animation */
+.fade {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 1s;
+}
+
+.fade.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive */
+@media(max-width: 600px){
+    .hero h1 {
+        font-size: 28px;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<nav>
+    <h2>GAIBU BASHA</h2>
+    <div>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Work</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <img src="profile.jpg" alt="profile">
+    <h1>Hi, I'm <span>Gaibu Basha</span> 👋</h1>
+    <h2 class="typing">Data Entry | Video Editor | Photo Editor | MS OFFICE</h2>
+</section>
+
+<section id="about" class="fade">
+    <h2>About Me</h2>
+    <p>I have basic knowledge of computers and experience in MS Office, data entry, and editing. I am passionate about learning new digital skills.</p>
+</section>
+
+<section id="skills" class="fade">
+    <h2 class="skill-title">My Skills 🚀</h2>
+
+    <div class="skills">
+        <span>MS Office</span>
+        <span>MS Word</span>
+        <span>Excel</span>
+        <span>PowerPoint</span>
+        <span>Data Entry</span>
+        <span>Document Typing</span>
+        <span>Video Editing</span>
+        <span>Photo Editing</span>
+    </div>
+</section>
+
+<section id="projects" class="fade">
+    <h2>My Work</h2>
+
+    <div class="card">
+        <h3>Data Entry Work</h3>
+        <p>Handled data entry tasks using Excel and MS Word.</p>
+    </div>
+
+    <div class="card">
+        <h3>Video Editing</h3>
+        <p>Edited videos using basic editing tools.</p>
+    </div>
+
+    <div class="card">
+        <h3>Document Typing</h3>
+        <p>Typing and formatting documents professionally.</p>
+    </div>
+
+</section>
+
+<section id="contact" class="fade contact-section">
+    <h2>Contact</h2>
+
+    <p class="contact-email">
+        Email: bashagaibu339@gmail.com
+    </p>
+
+    <button onclick="window.open('Gaibu Basha Resume.pdf')" class="btn contact-btn">
+        Download Resume
+    </button>
+</section>
+
+<script>
+// Scroll animation
+const fades = document.querySelectorAll('.fade');
+
+window.addEventListener('scroll', () => {
+    fades.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if(top < window.innerHeight - 100){
+            el.classList.add('show');
+        }
+    });
+});
+</script>
+
+</body>
+</html>
